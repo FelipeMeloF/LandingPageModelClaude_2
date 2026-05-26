@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSP: strict script-src to mitigate XSS (JS-CSP-001, JS-CSP-002) -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;" />
+
+  <!-- SEO Meta Tags -->
+  <title>Imobiliária Extremo Oriente — Encontre o Imóvel dos Seus Sonhos</title>
+  <meta name="description" content="Baixe o app da Imobiliária Extremo Oriente e encontre casas, apartamentos e salas comerciais para venda e locação. Catálogo completo na palma da sua mão." />
+  <meta name="keywords" content="imobiliária, imóveis, apartamentos, casas, aluguel, venda, locação, extremo oriente, app imobiliária" />
+  <meta name="author" content="Imobiliária Extremo Oriente" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Imobiliária Extremo Oriente — Encontre o Imóvel dos Seus Sonhos" />
+  <meta property="og:description" content="Baixe o app e explore centenas de imóveis para venda e locação." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/hero-building.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- HEADER / NAV -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <header id="site-header" class="header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <div class="nav__logo">
+        <span class="nav__logo-icon" aria-hidden="true">&#9670;</span>
+        <span class="nav__logo-text">Extremo Oriente</span>
+      </div>
+      <ul class="nav__links" role="list">
+        <li><a href="#benefits" class="nav__link">Vantagens</a></li>
+        <li><a href="#catalog" class="nav__link">Catálogo</a></li>
+        <li><a href="#reviews" class="nav__link">Avaliações</a></li>
+        <li><a href="#download" class="nav__link">Baixar App</a></li>
+      </ul>
+      <button id="nav-toggle" class="nav__toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+        <span class="nav__toggle-bar" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- MAIN CONTENT -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ─────────────────── HERO ─────────────────── -->
+    <section id="hero" class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg-overlay" aria-hidden="true"></div>
+      <div class="hero__particles" id="hero-particles" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <div class="hero__text">
+          <p class="hero__eyebrow">Imobiliária Extremo Oriente</p>
+          <h1 id="hero-heading" class="hero__heading" style="text-wrap: balance;">
+            Encontre o imóvel dos seus <span class="text-gold">sonhos</span>
+          </h1>
+          <p class="hero__subheading">
+            Centenas de imóveis para venda e locação ao alcance de um toque. Baixe nosso app e explore o catálogo completo.
+          </p>
+          <div class="hero__actions">
+            <a href="#download" class="btn btn--primary" id="hero-cta-download">
+              <span aria-hidden="true">📱</span> Baixar o App
+            </a>
+            <a href="#catalog" class="btn btn--outline" id="hero-cta-catalog">
+              Ver Catálogo
+            </a>
+          </div>
+          <div class="hero__stats" aria-label="Estatísticas da imobiliária">
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="500">0</span><span class="hero__stat-suffix">+</span>
+              <span class="hero__stat-label">Imóveis</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="1200">0</span><span class="hero__stat-suffix">+</span>
+              <span class="hero__stat-label">Clientes Satisfeitos</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="15">0</span><span class="hero__stat-suffix">+</span>
+              <span class="hero__stat-label">Anos de Mercado</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__image">
+          <div class="hero__phone-mockup">
+            <img src="/app-mockup.png" alt="Tela do aplicativo Imobiliária Extremo Oriente mostrando lista de imóveis" width="400" height="600" fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-arrow"></span>
+      </div>
+    </section>
+
+    <!-- ─────────────── BENEFITS ─────────────────── -->
+    <section id="benefits" class="benefits section" aria-labelledby="benefits-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Por que escolher nosso app?</span>
+          <h2 id="benefits-heading" class="section__title" style="text-wrap: balance;">
+            Tudo que você precisa em um <span class="text-gold">só lugar</span>
+          </h2>
+          <p class="section__subtitle">Nosso app foi desenvolvido para tornar a busca pelo imóvel ideal uma experiência fácil, rápida e prazerosa.</p>
+        </div>
+        <div class="benefits__grid">
+          <article class="benefit-card" id="benefit-search">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Busca Inteligente</h3>
+            <p class="benefit-card__text">Filtre por localização, preço, tipo e características. Encontre exatamente o que procura em segundos.</p>
+          </article>
+          <article class="benefit-card" id="benefit-photos">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Fotos em Alta Resolução</h3>
+            <p class="benefit-card__text">Visualize cada detalhe com imagens profissionais e tours virtuais de cada imóvel do catálogo.</p>
+          </article>
+          <article class="benefit-card" id="benefit-contact">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Contato Direto</h3>
+            <p class="benefit-card__text">Fale diretamente com nossos corretores especializados via chat, WhatsApp ou telefone pelo app.</p>
+          </article>
+          <article class="benefit-card" id="benefit-alerts">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Alertas Personalizados</h3>
+            <p class="benefit-card__text">Receba notificações quando novos imóveis compatíveis com seu perfil forem cadastrados.</p>
+          </article>
+          <article class="benefit-card" id="benefit-favorites">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Lista de Favoritos</h3>
+            <p class="benefit-card__text">Salve os imóveis que mais gostou e compare com calma antes de tomar a sua decisão.</p>
+          </article>
+          <article class="benefit-card" id="benefit-security">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Segurança Total</h3>
+            <p class="benefit-card__text">Seus dados protegidos com criptografia de ponta. Navegue e negocie com total tranquilidade.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── CATALOG ──────────────────── -->
+    <section id="catalog" class="catalog section" aria-labelledby="catalog-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Nosso Catálogo</span>
+          <h2 id="catalog-heading" class="section__title" style="text-wrap: balance;">
+            Imóveis <span class="text-gold">exclusivos</span> para você
+          </h2>
+          <p class="section__subtitle">Explore nosso portfólio cuidadosamente selecionado com os melhores imóveis da região.</p>
+        </div>
+        <div class="catalog__grid">
+          <article class="property-card" id="property-1">
+            <div class="property-card__image">
+              <img src="/property-house.png" alt="Casa moderna com piscina, jardim paisagístico e linhas arquitetônicas elegantes" width="600" height="400" loading="lazy" />
+              <span class="property-card__badge property-card__badge--sale">Venda</span>
+            </div>
+            <div class="property-card__content">
+              <h3 class="property-card__title">Casa de Alto Padrão</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Jardins — São Paulo, SP
+              </p>
+              <div class="property-card__details">
+                <span>4 quartos</span>
+                <span>3 banheiros</span>
+                <span>320m²</span>
+              </div>
+              <p class="property-card__price">R$&nbsp;2.850.000</p>
+            </div>
+          </article>
+          <article class="property-card" id="property-2">
+            <div class="property-card__image">
+              <img src="/property-apartment.png" alt="Apartamento moderno com sala ampla, janelas do chão ao teto e vista panorâmica da cidade" width="600" height="400" loading="lazy" />
+              <span class="property-card__badge property-card__badge--rent">Locação</span>
+            </div>
+            <div class="property-card__content">
+              <h3 class="property-card__title">Apartamento Luxuoso</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Vila Nova Conceição — São Paulo, SP
+              </p>
+              <div class="property-card__details">
+                <span>3 quartos</span>
+                <span>2 suítes</span>
+                <span>180m²</span>
+              </div>
+              <p class="property-card__price">R$&nbsp;8.500<small>/mês</small></p>
+            </div>
+          </article>
+          <article class="property-card" id="property-3">
+            <div class="property-card__image">
+              <img src="/property-commercial.png" alt="Escritório comercial moderno com paredes de vidro, vista panorâmica e decoração corporativa premium" width="600" height="400" loading="lazy" />
+              <span class="property-card__badge property-card__badge--sale">Venda</span>
+            </div>
+            <div class="property-card__content">
+              <h3 class="property-card__title">Sala Comercial Premium</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Faria Lima — São Paulo, SP
+              </p>
+              <div class="property-card__details">
+                <span>Open space</span>
+                <span>2 banheiros</span>
+                <span>150m²</span>
+              </div>
+              <p class="property-card__price">R$&nbsp;1.200.000</p>
+            </div>
+          </article>
+        </div>
+        <div class="catalog__cta">
+          <a href="#download" class="btn btn--primary" id="catalog-cta">
+            Ver Todos no App <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── REVIEWS ──────────────────── -->
+    <section id="reviews" class="reviews section" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Depoimentos</span>
+          <h2 id="reviews-heading" class="section__title" style="text-wrap: balance;">
+            O que nossos <span class="text-gold">clientes</span> dizem
+          </h2>
+          <p class="section__subtitle">A satisfação de quem já encontrou o lar ideal com a Extremo Oriente.</p>
+        </div>
+        <div class="reviews__carousel" id="reviews-carousel" aria-label="Carrossel de avaliações de clientes">
+          <div class="reviews__track" id="reviews-track">
+            <article class="review-card" id="review-1">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote class="review-card__text">
+                &ldquo;O app facilitou muito minha busca. Consegui encontrar o apartamento perfeito em menos de uma semana! Os filtros são incríveis e as fotos são reais.&rdquo;
+              </blockquote>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">MR</div>
+                <div>
+                  <p class="review-card__name">Mariana Rodrigues</p>
+                  <p class="review-card__role">Compradora — Apartamento em Pinheiros</p>
+                </div>
+              </div>
+            </article>
+            <article class="review-card" id="review-2">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote class="review-card__text">
+                &ldquo;Atendimento excepcional! O corretor que me atendeu pelo app foi muito atencioso e profissional. Recomendo de olhos fechados para quem quer alugar com segurança.&rdquo;
+              </blockquote>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">CS</div>
+                <div>
+                  <p class="review-card__name">Carlos Silva</p>
+                  <p class="review-card__role">Locatário — Casa no Morumbi</p>
+                </div>
+              </div>
+            </article>
+            <article class="review-card" id="review-3">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote class="review-card__text">
+                &ldquo;Melhor imobiliária de São Paulo! Encontrei minha sala comercial pelo app e todo o processo foi muito transparente. A equipe é extremamente competente.&rdquo;
+              </blockquote>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">AF</div>
+                <div>
+                  <p class="review-card__name">Ana Ferreira</p>
+                  <p class="review-card__role">Empresária — Sala Comercial na Faria Lima</p>
+                </div>
+              </div>
+            </article>
+            <article class="review-card" id="review-4">
+              <div class="review-card__stars" aria-label="4 de 5 estrelas">
+                <span aria-hidden="true">★★★★☆</span>
+              </div>
+              <blockquote class="review-card__text">
+                &ldquo;Praticidade incrível. Consegui agendar visitas, falar com corretores e comparar imóveis tudo pelo celular. A interface é linda e muito fácil de usar.&rdquo;
+              </blockquote>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">RL</div>
+                <div>
+                  <p class="review-card__name">Ricardo Lima</p>
+                  <p class="review-card__role">Investidor — Múltiplos Imóveis</p>
+                </div>
+              </div>
+            </article>
+            <article class="review-card" id="review-5">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote class="review-card__text">
+                &ldquo;Mudamos de cidade e o app foi essencial. Conseguimos encontrar e visitar virtualmente diversos apartamentos antes mesmo de chegar. Processo super ágil!&rdquo;
+              </blockquote>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">JP</div>
+                <div>
+                  <p class="review-card__name">Juliana e Pedro</p>
+                  <p class="review-card__role">Casal — Apartamento na Vila Olímpia</p>
+                </div>
+              </div>
+            </article>
+            <article class="review-card" id="review-6">
+              <div class="review-card__stars" aria-label="5 de 5 estrelas">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <blockquote class="review-card__text">
+                &ldquo;A transparência é o ponto forte. Todos os custos são mostrados de forma clara no app, sem surpresas. Finalmente uma imobiliária honesta e moderna!&rdquo;
+              </blockquote>
+              <div class="review-card__author">
+                <div class="review-card__avatar" aria-hidden="true">FO</div>
+                <div>
+                  <p class="review-card__name">Fernanda Oliveira</p>
+                  <p class="review-card__role">Compradora — Casa em Alphaville</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="reviews__controls">
+            <button class="reviews__btn reviews__btn--prev" id="reviews-prev" aria-label="Avaliação anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="reviews__dots" id="reviews-dots" role="tablist" aria-label="Indicadores do carrossel"></div>
+            <button class="reviews__btn reviews__btn--next" id="reviews-next" aria-label="Próxima avaliação">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────── DOWNLOAD CTA ─────────────── -->
+    <section id="download" class="download section" aria-labelledby="download-heading">
+      <div class="download__glow" aria-hidden="true"></div>
+      <div class="container download__container">
+        <div class="download__content">
+          <span class="section__eyebrow">Baixe Agora</span>
+          <h2 id="download-heading" class="section__title" style="text-wrap: balance;">
+            Seu próximo lar está a um <span class="text-gold">download</span> de distância
+          </h2>
+          <p class="section__subtitle">Disponível gratuitamente para Android e iOS. Junte-se a mais de 1.200 clientes satisfeitos.</p>
+          <div class="download__buttons">
+            <a href="#" class="download__store-btn" id="download-google-play" aria-label="Baixar na Google Play Store">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a1.636 1.636 0 0 1-.609-1.27V3.084c0-.479.222-.918.609-1.27zm.755-.691l11.346 6.39-2.69 2.69L3.364 1.123zm11.346 15.754L4.364 23.267l9.656-9.076 2.69 2.686zM20.436 10.6l-3.918 2.206L13.2 12l3.318-1.806 3.918 2.206a1.318 1.318 0 0 1 0 2.2z"/></svg>
+              <div>
+                <small>Disponível no</small>
+                <span>Google Play</span>
+              </div>
+            </a>
+            <a href="#" class="download__store-btn" id="download-app-store" aria-label="Baixar na App Store">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div>
+                <small>Disponível na</small>
+                <span>App Store</span>
+              </div>
+            </a>
+          </div>
+          <p class="download__note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            100% gratuito &bull; Sem anúncios &bull; Dados protegidos
+          </p>
+        </div>
+        <div class="download__image">
+          <img src="/app-mockup.png" alt="Aplicativo Imobiliária Extremo Oriente em um smartphone" width="350" height="525" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer id="site-footer" class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <div class="nav__logo">
+          <span class="nav__logo-icon" aria-hidden="true">&#9670;</span>
+          <span class="nav__logo-text">Extremo Oriente</span>
+        </div>
+        <p class="footer__tagline">Transformando sonhos em endereços desde 2011.</p>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h3 class="footer__col-title">Navegação</h3>
+          <ul role="list">
+            <li><a href="#benefits">Vantagens</a></li>
+            <li><a href="#catalog">Catálogo</a></li>
+            <li><a href="#reviews">Avaliações</a></li>
+            <li><a href="#download">Baixar App</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contato</h3>
+          <ul role="list">
+            <li>contato@extremooriente.com.br</li>
+            <li>(11) 99999-0000</li>
+            <li>São Paulo, SP — Brasil</li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__col-title">Legal</h3>
+          <ul role="list">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li>CRECI: 12345-J</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <p>&copy; 2025 Imobiliária Extremo Oriente. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
